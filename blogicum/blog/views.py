@@ -1,6 +1,4 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import loader
 
 
 def index(request):
@@ -15,6 +13,7 @@ def post_detail(request, id):
 def category_posts(request, category_slug):
     category = {'text': category_slug}
     return render(request, 'blog/category.html', {'category': category})
+
 
 posts = [
     {
